@@ -6,7 +6,7 @@ body, html {
 height: 100%
 }
 
-.row, .row1, .row2 {
+/* .row, .row1, .row2 {
   height: 30%;
   width: 80%;
   margin: auto auto;
@@ -39,5 +39,22 @@ height: 100%
   box-sizing: border-box;
   text-align: center;
   vertical-align: middle;
+} */
+
+table {
+  height: 90%;
+  width: 75%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border: 1px solid black;
+  margin: auto auto;
+}
+
+tr {
+  height: 33%;
+}
+td {
+  width: 33%;
+  border: 1px solid black;
 }
 
