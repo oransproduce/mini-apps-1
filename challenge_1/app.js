@@ -20,7 +20,7 @@ let render = {
 // State:
 class Storage {
   constructor() {
-    this._state = [[],[],[]];
+    this._state = [[], [], []];
     this.numTurns = 0;
   }
 
@@ -35,7 +35,6 @@ class Storage {
 
       this.numTurns++;
       render.renderState(row, col, this._state[row][col]);
-
       this.checkWin();
     }
 
@@ -44,23 +43,30 @@ class Storage {
   checkWin() {
     let potentialWin = this.checkDiagnols();
     if (potentialWin) {
-      this.onWin(potentialWin)
+      this.onWin(potentialWin);
+      return;
     }
     potentialWin = this.checkHorizontals();
     if (potentialWin) {
       this.onWin(potentialWin);
+      return;
     }
     potentialWin = this.checkVerticals();
     if (potentialWin) {
       this.onWin(potentialWin);
+      return;
     }
     if (this.numTurns === 9) {
+      debugger;
       alert('Draw');
+      storage.reset();
+      render.clearState();
     }
   }
 
   onWin(whichPlayer) {
     alert('Player ' + whichPlayer + ' has won!');
+    storage.reset();
     render.clearState();
   }
 
@@ -108,6 +114,10 @@ class Storage {
     }
   }
 
+  reset() {
+    this._state = [[], [], []];
+    this.numTurns = 0;
+  }
 
 }
 
@@ -121,7 +131,7 @@ element.addEventListener('click', event => {
 });
 
 document.getElementById('restart').addEventListener('click', event => {
-  storage = new Storage();
+  storage.reset();
   render.clearState();
 })
 

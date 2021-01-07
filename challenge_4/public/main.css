@@ -1,0 +1,28 @@
+body, html, .container {
+  height: 100%;
+}
+
+#app {
+  height: 100%;
+}
+
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  height: 90%;
+  width: 70%;
+  margin: auto auto;
+  border: 5px solid grey;
+  text-align: center;
+}
+
+tr {
+  height: 16.66%;
+  box-sizing: border-box;
+}
+
+td {
+  width: 14.28%;
+  border: 3px solid rgb(179, 176, 176);
+  box-sizing: border-box;
+}

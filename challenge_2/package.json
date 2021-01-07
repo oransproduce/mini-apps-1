@@ -1,0 +1,21 @@
+{
+  "name": "csv_report_generator",
+  "version": "1.0.0",
+  "description": "minisprint 2",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "jquery": "^3.5.1",
+    "multiparty": "^4.2.2",
+    "nodemon": "^2.0.6",
+    "pug": "^3.0.0",
+    "underscore": "^1.12.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "remy orans",
+  "license": "ISC"
+}

@@ -1,2 +1,23 @@
-
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>
+      CSV Report Generator
+    </title>
+  </head>
+  <body>
+    <h1>CSV Report Generator</h1>
+    <form action='/form' method='POST' enctype="multipart/form-data">
+      <div>
+        <label>
+          Input JSON:
+        </label>
+        <input type='file' name='myFile'>
+      </div>
+      <input type='submit' value='Submit'>
+    </form>
+    <script src='app.js'></script>
+  </body>
+</html>
 
